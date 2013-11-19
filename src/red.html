@@ -99,18 +99,22 @@
 
 <template name="menu">
 	<ul class="nav">
-		<li>
-			<a href="#" class="menugroup">Relief Operations Center</a>
-		</li>
-		<ul>
+		{{#each menuItems}}
 			<li>
-				<a href="#" title="Create a new relief operation">Create Relief Operation</a>
+				<a href="#" class="menugroup" title="{{title}}">{{label}}</a>
 			</li>
-			<li>
-				<a href="#">Manage Relief Operation</a>
-			</li>
-		</ul>
+			{{#if hasChildren}}
+				<ul>
+					{{#each menuitem}}
+						<li>
+							<a href="{{url}}" title="{{title}}">{{label}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			{{/if}}
+		{{/each}}
 	</ul>
+
 </template>
 
 <template name="footer">
