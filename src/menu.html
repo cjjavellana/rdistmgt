@@ -1,0 +1,18 @@
+<template name="menu">
+	<ul class="nav">
+		{{#each menuItems}}
+			<li>
+				<a href="#" class="menugroup" title="{{title}}">{{label}}</a>
+			</li>
+			{{#if hasChildren}}
+				<ul>
+					{{#each menuitem}}
+						<li>
+							<a href="{{url}}" title="{{title}}">{{label}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			{{/if}}
+		{{/each}}
+	</ul>
+</template>

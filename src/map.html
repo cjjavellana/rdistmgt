@@ -1,10 +1,5 @@
-<head>
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  	<title>Relief Distribution Management System</title>
-  	<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU72VoGr-rUp62-w04DyBfucCdnDq1uhs&sensor=true">
-    </script>
-    <script type="text/javascript">
+<template name="map">
+	<script type="text/javascript">
       	// This example creates a simple polygon representing the Bermuda Triangle.
 		// When the user clicks on the polygon an info window opens, showing
 		// information about the polygon's coordinates.
@@ -21,7 +16,7 @@
 
 		  var bermudaTriangle;
 
-		  map = new google.maps.Map(document.getElementById('map-canvas'),
+		  map = new google.maps.Map($('#map-canvas'),
 		      mapOptions);
 
 		  //map event
@@ -67,37 +62,5 @@
 
 		google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-</head>
-
-<body>
-	<header class="navbar navbar-inverse navbar-fixed-top header-nav" role="banner">
-		<div class="container">
-			<div class="navbar-header banner">
-				{{> siteHeader}}
-			</div>
-		</div>
-	</header>
-	<div class="container content">
-		<div class="row col-lg-2 menu">
-			{{> menu}}
-		</div>
-		<div class="row col-lg-10 main">
-			{{> map}}
-		</div>
-		
-	</div>
-	<footer class="red-footer">
-		<div class="container">
-			<span>{{> footer}}</span>
-		</div>	
-	</footer>
-</body>
-
-<template name="siteHeader">	
-	<a href="/" class="redlogo">{{redLogo}}</a>
+  <div id="map-canvas"/>
 </template>
-
-<template name="footer">
-	{{footerMsg}}
-</template>
-
