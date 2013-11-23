@@ -7,7 +7,7 @@ curl https://install.meteor.com | /bin/sh
 OSX: <br/>
 ```sh
 vim ~/.bash_profile 
-export MONGODB_URL=mongodb://&lt;hostname&gt;:&lt;port&gt;/&lt;database_name&gt;
+export MONGODB_URL=mongodb://<hostname>:<port>/<databasename>
 ``` 
 
 <h3>Installing meteorite</h3>
