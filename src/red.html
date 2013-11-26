@@ -5,31 +5,15 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU72VoGr-rUp62-w04DyBfucCdnDq1uhs&sensor=true">
     </script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=drawing&sensor=true">
-    </script>
+    </script>	
+
 </head>
 
 <body>
-	<header class="navbar navbar-inverse navbar-fixed-top header-nav" role="banner">
-		<div class="container">
-			<div class="navbar-header banner">
-				{{> siteHeader}}
-			</div>
-		</div>
-	</header>
-	<div class="container content">
-		<div class="row col-lg-2 menu">
-			{{> menu}}
-		</div>
-		<div class="row col-lg-10 main">
-			{{> map}}
-		</div>
-		
-	</div>
-	<footer class="red-footer">
-		<div class="container">
-			<span>{{> footer}}</span>
-		</div>	
-	</footer>
+	<!-- 
+		This is where content will be appended by iron-router. 
+		See https://github.com/EventedMind/iron-router#client-side-routing
+	-->
 </body>
 
 <template name="siteHeader">	

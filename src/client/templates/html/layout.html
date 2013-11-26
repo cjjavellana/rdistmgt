@@ -1,0 +1,23 @@
+<template name="layout">
+	<header class="navbar navbar-inverse navbar-fixed-top header-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header banner">
+				{{> siteHeader}}
+			</div>
+		</div>
+	</header>
+	<div class="container content">
+		<div class="row col-lg-2 menu">
+			{{> menu}}
+		</div>
+		<div class="row col-lg-10 main">
+			{{yield}}
+		</div>
+		
+	</div>
+	<footer class="red-footer">
+		<div class="container">
+			<span>{{> footer}}</span>
+		</div>	
+	</footer>
+</template>

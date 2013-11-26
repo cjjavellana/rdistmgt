@@ -4,3 +4,7 @@
 Template.map.rendered = function(){
 	var map = $('#map-canvas').drawMap({drawingOptions: true});
 }
+
+Template.create_operation.rendered = function(){
+	$('.selectpicker').selectpicker();
+}
