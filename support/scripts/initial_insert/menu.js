@@ -38,3 +38,26 @@ db.menuitem.insert(
 		}]
 	}]
 );
+
+db.regions.insert(
+	[{
+		name: 'Region 1',
+		description: 'Ilocos Region',
+		lgu: ['Dagupan', 'Ilocos Norte', 'Ilocos Sur', 'La Union', 'Pangasinan'],
+		/** The latitude & longitude boundaries of the region*/
+		boundaries: []	
+	},{
+		name: 'Region 2',
+		description: 'Cagayan Valley',
+		lgu: ['Batanes', 'Cagayan', 'Isabela', 'Nueva Vizcaya', 'Quirino', 'Santiago'],
+		/** The latitude & longitude boundaries of the region*/
+		boundaries: []	
+	},{
+		name: 'Region 3',
+		description: 'Central Luzon',
+		lgu: ['Angeles', 'Aurora', 'Bataan', 'Bulacan', 'Nueva Ecija', 
+			'Olongapo', 'Pampanga', 'Tarlac', 'Zambales'],
+		/** The latitude & longitude boundaries of the region*/
+		boundaries: []	
+	}]
+);
