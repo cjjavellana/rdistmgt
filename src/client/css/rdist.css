@@ -4,7 +4,7 @@ body {
 	height: 100%; 
 	margin: 0; 
 	padding: 0; 
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333;
@@ -36,3 +36,4 @@ body {
 .nav li a {color: #000; }
 .nav ul li a {margin-bottom: 15px; height: 20px;}
 .red-footer {background-color: #dfdfdf; height: auto; font-size: 11px;}
+h4 {color: #a8a8a8;}

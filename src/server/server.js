@@ -7,6 +7,10 @@ Meteor.publish("menuItems", function(){
 	return MenuItems.find({});
 });
 
+Regions = new Meteor.Collection("regions");
+Meteor.publish("allRegions", function(){
+	return Regions.find({});
+});
 
 Meteor.startup(function () {
 	

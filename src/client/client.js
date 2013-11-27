@@ -1,6 +1,5 @@
 //listen to 'menuItems' events being published from the server
 Meteor.subscribe("menuItems");
-
 MenuItems = new Meteor.Collection('menuitem');
 Template.menu.menuItems = function() {
 	return MenuItems.find({});
@@ -12,4 +11,10 @@ Template.menu.hasChildren = function() {
 		return this.menuitem.length > 0;
 	}
 	return false;
+}
+
+Meteor.subscribe("allRegions");
+Regions = new Meteor.Collection("regions");
+Template.create_operation.regions = function(){
+	return Regions.find({});
 }
