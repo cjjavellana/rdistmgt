@@ -6,5 +6,6 @@ Template.map.rendered = function(){
 }
 
 Template.create_operation.rendered = function(){
+	$('input,textarea').not("[type=submit]").jqBootstrapValidation();
 	$('.selectpicker').selectpicker();
 }

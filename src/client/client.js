@@ -15,6 +15,18 @@ Template.menu.hasChildren = function() {
 
 Meteor.subscribe("allRegions");
 Regions = new Meteor.Collection("regions");
-Template.create_operation.regions = function(){
+Template.region_template.regions = function(){
 	return Regions.find({});
 }
+
+Template.lgu_template.lgus = function(){
+	var result = Regions.find({name: Session.get('selected_region')}, {lgu: 1});
+	return result;
+}
+
+Deps.autorun(function(){
+	/**
+	 * Finds the lgus for the specified region
+	 */
+	//Meteor.subscribe('lgus', Session.get('selected_region'));
+});
