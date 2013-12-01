@@ -43,20 +43,42 @@ db.regions.insert(
 	[{
 		name: 'Region 1',
 		description: 'Ilocos Region',
-		lgu: ['Dagupan', 'Ilocos Norte', 'Ilocos Sur', 'La Union', 'Pangasinan'],
+		lgu: [
+			{province: 'Dagupan'}, 
+			{province: 'Ilocos Norte'}, 
+			{province: 'Ilocos Sur'}, 
+			{province: 'La Union'}, 
+			{province: 'Pangasinan'}
+		],
 		/** The latitude & longitude boundaries of the region*/
 		boundaries: []	
 	},{
 		name: 'Region 2',
 		description: 'Cagayan Valley',
-		lgu: ['Batanes', 'Cagayan', 'Isabela', 'Nueva Vizcaya', 'Quirino', 'Santiago'],
+		lgu: [
+			{province: 'Batanes'}, 
+			{province: 'Cagayan'}, 
+			{province: 'Isabela'}, 
+			{province: 'Nueva Vizcaya'}, 
+			{province: 'Quirino'}, 
+			{province: 'Santiago'}
+		],
 		/** The latitude & longitude boundaries of the region*/
 		boundaries: []	
 	},{
 		name: 'Region 3',
 		description: 'Central Luzon',
-		lgu: ['Angeles', 'Aurora', 'Bataan', 'Bulacan', 'Nueva Ecija', 
-			'Olongapo', 'Pampanga', 'Tarlac', 'Zambales'],
+		lgu: [
+			{province: 'Angeles'}, 
+			{province: 'Aurora'}, 
+			{province: 'Bataan'}, 
+			{province: 'Bulacan'}, 
+			{province: 'Nueva Ecija'}, 
+			{province: 'Olongapo'}, 
+			{province: 'Pampanga'}, 
+			{province: 'Tarlac'}, 
+			{province: 'Zambales'}
+		],
 		/** The latitude & longitude boundaries of the region*/
 		boundaries: []	
 	}]
