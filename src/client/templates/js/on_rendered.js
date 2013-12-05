@@ -7,5 +7,10 @@ Template.map.rendered = function(){
 
 Template.create_operation.rendered = function(){
 	$('input,textarea').not("[type=submit]").jqBootstrapValidation();
-	$('.selectpicker').selectpicker();
+	//$('.selectpicker').selectpicker();
 }
+
+Template.lgu_template.rendered = function(){
+	$('.selectpicker').selectpicker('refresh');
+}
+

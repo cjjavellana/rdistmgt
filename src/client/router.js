@@ -7,6 +7,9 @@ Router.map(function(){
 	this.route('/createOps', {
 		path: '/createOps',
 		template: 'create_operation',
-		layoutTemplate: 'layout'
+		layoutTemplate: 'layout',
+		waitOn: function(){
+			Meteor.subscribe("regions");
+		}
 	});
 });

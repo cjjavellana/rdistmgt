@@ -15,9 +15,25 @@
 				</div>
 			</div>
 			
-			{{> region_template}}
-			{{> lgu_template}}
-
+			<div class="form-group">
+				<label for="region" class="col-sm-2 control-label">Region</label>
+				<div class="col-sm-4">
+					<select id="region" class="selectpicker form-control region">
+						<option>-- Select Region --</option>
+						{{#each regions}}
+							<option value="{{name}}">{{description}}</option>
+						{{/each}}
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="lgu" class="col-sm-2 control-label">LGU</label>
+				<div class="col-sm-4">
+					<select id="lgu" class="selectpicker form-control lgu">
+						{{> lgu_template}}
+					</select>
+				</div>
+			</div>
 			<div class="form-group">
 				<label for="opbudget" class="col-sm-2 control-label">Operating Budget</label>
 				<div class="col-sm-4 controls">
@@ -27,35 +43,24 @@
         				data-validation-pattern-message="Must be a valid amount. e.g. 100,000.00"/>
 				</div>
 			</div>
+
+			<div class="form-group">
+				<div class="col-sm-4 control-label">
+					<button type="button" class="btn btn-primary">Create</button>
+					<button type="button" class="btn btn-primary">Cancel</button>
+				</div>
+			</div>
 	</form>
 </template>
 
-<template name="region_template">
-	<div class="form-group">
-		<label for="region" class="col-sm-2 control-label">Region</label>
-		<div class="col-sm-4">
-			<select id="region" class="selectpicker form-control region">
-				<option>-- Select Region --</option>
-				{{#each regions}}
-					<option value="{{name}}">{{description}}</option>
-				{{/each}}
-			</select>
-		</div>
-	</div>
-</template>
 
 <template name="lgu_template">
-	<div class="form-group">
-		<label for="lgu" class="col-sm-2 control-label">LGU</label>
-		<div class="col-sm-4">
-			<select id="lgu" class="selectpicker form-control lgu">
-				<option selected="selected">-- Select LGU --</option>
-				{{#each lgus}}
-					{{#each lgu}}
-					<option value="{{province}}">{{province}}</option>
-					{{/each}}
-				{{/each}}
-			</select>
-		</div>
-	</div>
+	
+	<option selected="selected">-- Select LGU --</option>
+	{{#each lgus}}
+		{{#each lgu}}
+		<option value="{{province}}">{{province}}</option>
+		{{/each}}
+	{{/each}}
+			
 </template>

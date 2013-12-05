@@ -13,20 +13,20 @@ Template.menu.hasChildren = function() {
 	return false;
 }
 
-Meteor.subscribe("allRegions");
 Regions = new Meteor.Collection("regions");
-Template.region_template.regions = function(){
+Template.create_operation.regions = function(){
 	return Regions.find({});
 }
 
-Template.lgu_template.lgus = function(){
-	var result = Regions.find({name: Session.get('selected_region')}, {lgu: 1});
-	return result;
+Template.lgu_template.lgus = function(parent){
+	var region_name = Session.get('selected_region');
+	if( region_name != undefined){
+		return Regions.find({name: region_name}, {lgu: 1});
+	}
+
+	return [];
 }
 
 Deps.autorun(function(){
-	/**
-	 * Finds the lgus for the specified region
-	 */
-	//Meteor.subscribe('lgus', Session.get('selected_region'));
+	Meteor.subscribe('lgus', Session.get('selected_region'));
 });

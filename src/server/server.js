@@ -8,15 +8,16 @@ Meteor.publish("menuItems", function(){
 });
 
 Regions = new Meteor.Collection("regions");
-Meteor.publish("allRegions", function(){
+Meteor.publish("regions", function(){
 	return Regions.find({});
 });
 
-Meteor.publish('lgus', function(regionId){
-	//Console.log('Retrieving region: ' + regionId);
-	var tb = Observatory.getToolbox();
-	tb.debug('Some Debugging Stuff', regionId);
-	return Regions.find({_id: regionId}, {lgu: 1});
+Meteor.publish('lgus', function(regionname){
+	console.log('test ' + regionname);
+	if(regionname){
+		return Regions.find({name: regionname}, {lgu: 1});
+	}
+	return Regions.find({});
 });
 
 Meteor.startup(function () {
